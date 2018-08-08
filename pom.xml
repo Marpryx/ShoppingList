@@ -8,6 +8,12 @@
     <artifactId>shopping-list</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--Setup the Maven-war plugin
+    The WAR Plugin is responsible for collecting all artifact dependencies,classes and resources of the web
+    application and packaging them into a web application archive-->
+
+    <packaging>war</packaging>
+
    <!--properties -->
     <properties>
         <spring-webmvc.version>5.0.7.RELEASE</spring-webmvc.version>
@@ -69,6 +75,18 @@
                     <release>${java.version}</release>
                 </configuration>
             </plugin>
+
+            <!--Setup the Maven-war plugin -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
 
 
 
