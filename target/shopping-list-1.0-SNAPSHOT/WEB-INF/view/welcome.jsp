@@ -4,6 +4,7 @@
 </head>
 
 <body>
-    <h1>Hello shopping list</h1>
+    <h1>${helloMessage}</h1>
+    <h2>${welcomeMessage}</h2>
 </body>
 </html>

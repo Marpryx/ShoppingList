@@ -1,3 +1,5 @@
 prykhodko/learnSpring/config/WebConfig.class
 prykhodko/learnSpring/config/WebAppInitializer.class
+prykhodko/learnSpring/service/DemoServiceImplementation.class
+prykhodko/learnSpring/service/DemoService.class
 prykhodko/learnSpring/controller/DemoController.class
