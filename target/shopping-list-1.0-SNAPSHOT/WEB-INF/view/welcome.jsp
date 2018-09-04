@@ -5,6 +5,7 @@
 
 <body>
     <h1>${helloMessage}</h1>
+    <h2>Family name is ${familyName}</h2>
     <h2>${welcomeMessage}</h2>
 </body>
 </html>

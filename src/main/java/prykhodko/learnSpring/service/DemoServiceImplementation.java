@@ -10,7 +10,7 @@ public class DemoServiceImplementation implements DemoService {
 
     @Override
     public String getHelloMessage(String user) {
-        return "Hello" + user;
+        return "Hello " + user;
     }
 
     @Override

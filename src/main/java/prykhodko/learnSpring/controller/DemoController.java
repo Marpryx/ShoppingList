@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import prykhodko.learnSpring.service.DemoService;
 
@@ -26,11 +27,16 @@ public class DemoController {
 
     //http://localhost:8080/shopping-list/welcome
 
+    //user=Maryna is a query parameter that we are passing to the controller method through the browser
+    //http://localhost:8080/shopping-list/welcome?user=Maryna
+
     @GetMapping("welcome")
-    public String welcome(Model model){
+    public String welcome(@RequestParam String user, @RequestParam String familyName, Model model){
 
         //To display Hello message with the user's name
-        model.addAttribute("helloMessage", demoService.getHelloMessage("Maryna")); //adding key value pair to the model
+        //http://localhost:8080/shopping-list/welcome?user=Maryna&familyName=Pryx //multiply query param
+        model.addAttribute("helloMessage", demoService.getHelloMessage(user)); //adding key value pair to the model
+        model.addAttribute("familyName", familyName);
         //prefix+name+suffix
         // /WEB-INF/view/welcome.jsp
 
