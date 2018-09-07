@@ -1,3 +1,25 @@
+///////////////////////////////////////////////////////////////////
+// The Shopping List app is a simple application that will manage
+// the items in the shopping list.
+//
+// The Shopping List will be represented by a simple class with the
+// fields: item, details, amount, price.
+//
+// The main requirements is performing CRUD operations
+// (Create, Read, Update, Delete).
+//
+// There are 4 pages to interact with the user:
+// - A page to check all the Shopping List items
+// - A page to check a single Shopping List item including its details
+// - A page to update a single Shopping List item
+// - A page to create a single item with details
+//
+// The is also opportunity to delete a single item from the Shopping List.
+//
+// There is a Welcome page with a welcome message and a link to the Shopping List items.
+// To make it simple, all data will be stored in a memory.
+///////////////////////////////////////////////////////////////////
+
 package prykhodko.learnSpring.controller;
 
 import lombok.extern.slf4j.Slf4j;
