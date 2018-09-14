@@ -1,3 +1,8 @@
+///////////////////////////////////////////////////////////////
+//
+//
+////////////////////////////////////////////////////////////////
+
 package prykhodko.learnSpring.model;
 
 import lombok.Data;
@@ -21,7 +26,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(of = "id") //To specify multiply fields { "","" ,"" ,"" } should be used, just declare as an array
-public class ToDoItem {
+public class ShoppingItem {
 
     // === Fields ===
     private int id;
@@ -31,7 +36,7 @@ public class ToDoItem {
     private double price;
 
     // === Constructors ===
-    public ToDoItem(String item, String details, int amount, double price) {
+    public ShoppingItem(String item, String details, int amount, double price) {
         this.item = item;
         this.details = details;
         this.amount = amount;
