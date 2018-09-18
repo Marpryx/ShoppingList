@@ -30,7 +30,7 @@ public class ShoppingItemController {
     //http://localhost:8080/shopping-list/items
     @GetMapping(Mappings.ITEMS)  //Annotation for mapping HTTP GET requests onto specific handler methods.
     public String items(){
-        return ViewNames.ITEMS;
+        return ViewNames.ITEMS_VIEW;
     }
 
 }

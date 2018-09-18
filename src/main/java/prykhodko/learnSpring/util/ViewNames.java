@@ -18,7 +18,7 @@ package prykhodko.learnSpring.util;
 public final class ViewNames {
 
     // == constants
-    public static final String ITEMS = "items";
+    public static final String ITEMS_VIEW = "list_items";
 
     //==constructors ==
     private ViewNames(){}

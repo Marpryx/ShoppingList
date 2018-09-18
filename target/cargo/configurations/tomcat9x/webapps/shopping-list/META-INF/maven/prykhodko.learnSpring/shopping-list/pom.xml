@@ -21,6 +21,7 @@
         <servlet-api.version>3.1.0</servlet-api.version>
         <jstl.version>1.2</jstl.version>
 
+
     </properties>
 
 
@@ -42,8 +43,9 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
+            <version>edge</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/lombok-edge.jar</systemPath>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -72,6 +74,13 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
