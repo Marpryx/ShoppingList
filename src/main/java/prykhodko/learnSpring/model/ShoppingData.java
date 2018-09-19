@@ -30,6 +30,10 @@ public class ShoppingData {
         addItem(new ShoppingItem("Shrimps", "Not China", 4, 9.99 ));
         addItem(new ShoppingItem("Potatoes", "White or Yellow", 2, 2.67 ));
         addItem(new ShoppingItem("Bread", "Multigrain", 3, 2.99 ));
+        addItem(new ShoppingItem("Pork", "Fillet", 6, 4.33 ));
+        addItem(new ShoppingItem("Fish fingers", "For kids", 2, 5.99 ));
+
+
 
 
     }

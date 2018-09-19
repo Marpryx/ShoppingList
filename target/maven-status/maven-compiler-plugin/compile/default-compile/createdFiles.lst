@@ -1,10 +1,12 @@
+prykhodko/learnSpring/service/ShoppingService.class
+prykhodko/learnSpring/service/ShoppingServiceImpl.class
+prykhodko/learnSpring/util/Mappings.class
+prykhodko/learnSpring/controller/DemoController.class
+prykhodko/learnSpring/service/DemoServiceImplementation.class
+prykhodko/learnSpring/controller/ShoppingItemController.class
 prykhodko/learnSpring/config/WebAppInitializer.class
 prykhodko/learnSpring/service/DemoService.class
 prykhodko/learnSpring/util/ViewNames.class
-prykhodko/learnSpring/util/Mappings.class
-prykhodko/learnSpring/controller/DemoController.class
 prykhodko/learnSpring/config/WebConfig.class
 prykhodko/learnSpring/model/ShoppingData.class
-prykhodko/learnSpring/service/DemoServiceImplementation.class
-prykhodko/learnSpring/controller/ShoppingItemController.class
 prykhodko/learnSpring/model/ShoppingItem.class

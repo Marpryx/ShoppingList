@@ -1,10 +1,12 @@
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/util/ViewNames.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/config/WebConfig.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/controller/ShoppingItemController.java
+/Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/service/ShoppingServiceImpl.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/config/WebAppInitializer.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/controller/DemoController.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/util/Mappings.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/service/DemoServiceImplementation.java
+/Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/service/ShoppingService.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/model/ShoppingData.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/service/DemoService.java
 /Users/marynaprix/IdeaProjects/SpringProject/shopping-list/src/main/java/prykhodko/learnSpring/model/ShoppingItem.java

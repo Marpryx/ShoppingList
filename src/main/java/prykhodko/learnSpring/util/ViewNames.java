@@ -18,7 +18,7 @@ package prykhodko.learnSpring.util;
 public final class ViewNames {
 
     // == constants
-    public static final String ITEMS_VIEW = "list_items";
+    public static final String ITEMS_VIEW = "list_items"; //the name of jsp page should be here
 
     //==constructors ==
     private ViewNames(){}

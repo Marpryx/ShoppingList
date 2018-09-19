@@ -5,15 +5,36 @@
 
 package prykhodko.learnSpring.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import prykhodko.learnSpring.model.ShoppingData;
+import prykhodko.learnSpring.service.ShoppingService;
 import prykhodko.learnSpring.util.Mappings;
 import prykhodko.learnSpring.util.ViewNames;
 
 @Controller
 public class ShoppingItemController {
+
+    // === Fields ===
+    private final ShoppingService shoppingService;
+
+    // ===Constructors ===
+
+    //@Autowired annotation allows Spring to resolve and inject
+    // collaborating beans into your bean.
+    //
+    //The @Autowired annotation can be used on constructors.
+    // In the constructor below, the annotation is used on a constructor,
+    // an instance of ShoppingService is injected as an argument to the
+    // constructor when ShoppingService is created:
+
+    @Autowired
+    public ShoppingItemController(ShoppingService shoppingService) {
+        this.shoppingService = shoppingService;
+    }
+
 
     // == Model attributes ==
 
@@ -23,7 +44,7 @@ public class ShoppingItemController {
 
     @ModelAttribute
     public ShoppingData shoppingData(){
-        return new ShoppingData();
+        return shoppingService.getData(); //instead of returning new ShoppingData()
     }
 
     //== Handler methods ==
