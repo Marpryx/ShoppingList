@@ -11,6 +11,7 @@ public final class Mappings {
 
     // == Constants ==
     public static final String ITEMS = "items";
+    public static final String ADD_PRODUCT = "addProduct";
 
     /**
      * Private keyword used to prevent constructor from be instantiated
