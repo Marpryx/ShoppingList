@@ -2,6 +2,7 @@ prykhodko/learnSpring/service/ShoppingService.class
 prykhodko/learnSpring/service/ShoppingServiceImpl.class
 prykhodko/learnSpring/util/Mappings.class
 prykhodko/learnSpring/controller/DemoController.class
+prykhodko/learnSpring/util/AttributeNames.class
 prykhodko/learnSpring/service/DemoServiceImplementation.class
 prykhodko/learnSpring/controller/ShoppingItemController.class
 prykhodko/learnSpring/config/WebAppInitializer.class

@@ -5,8 +5,10 @@
 
 package prykhodko.learnSpring.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +19,7 @@ import prykhodko.learnSpring.util.AttributeNames;
 import prykhodko.learnSpring.util.Mappings;
 import prykhodko.learnSpring.util.ViewNames;
 
+@Slf4j
 @Controller
 public class ShoppingItemController {
 
@@ -57,6 +60,23 @@ public class ShoppingItemController {
         return ViewNames.ITEMS_VIEW;
     }
 
+
+    /**
+     * Edits an item from the List.
+     * It used @GetMapping annotation since we need to execute the get HTTP request
+     * instead of POST HTTP request
+     * Displayed the form (show item view)
+     * @param model
+     * @return
+     */
+    @GetMapping(Mappings.ADD_PRODUCT)
+    //The model can supply attributes used for rendering views.
+    public String addEditProduct(Model model){
+        ShoppingItem item = new ShoppingItem("", "", 0, 0.00);
+        model.addAttribute(AttributeNames.SHOPPING_ITEM, item);
+        return ViewNames.ADD_PRODUCT_VIEW;
+    }
+
     /**
      * Used HTTP POST method
      * The method will be called after we submit the form to automatically get the
@@ -68,7 +88,10 @@ public class ShoppingItemController {
      */
     @PostMapping(Mappings.ADD_PRODUCT)
     //ModelAttribute name must match in both the controller and in the form
-    public String processProduct(@ModelAttribute(AttributeNames.SHOPPING_ITEM) ShoppingItem shoppingItem){
+    public String processProduct(@ModelAttribute(AttributeNames.SHOPPING_ITEM) ShoppingItem item){
+
+      //  log.info("ShoppingItem from form = {}", item);
+        shoppingService.addProduct(item);
         return "redirect:/" + Mappings.ITEMS; //to redirect the view to another url (product table)
                                               //also it's good to use redirect to an error page in
                                               // case if file upload wasn't successful.

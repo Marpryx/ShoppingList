@@ -19,6 +19,7 @@ public final class ViewNames {
 
     // == constants
     public static final String ITEMS_VIEW = "list_items"; //the name of jsp page should be here
+    public static final String ADD_PRODUCT_VIEW = "add_product";
 
     //==constructors ==
     private ViewNames(){}
