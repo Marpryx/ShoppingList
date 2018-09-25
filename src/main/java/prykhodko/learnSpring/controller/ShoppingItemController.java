@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import prykhodko.learnSpring.model.ShoppingData;
 import prykhodko.learnSpring.model.ShoppingItem;
 import prykhodko.learnSpring.service.ShoppingService;
@@ -55,6 +56,7 @@ public class ShoppingItemController {
 
     //== Handler methods ==
     //http://localhost:8080/shopping-list/items
+
     @GetMapping(Mappings.ITEMS)  //Annotation for mapping HTTP GET requests onto specific handler methods.
     public String items(){
         return ViewNames.ITEMS_VIEW;
@@ -69,6 +71,7 @@ public class ShoppingItemController {
      * @param model
      * @return
      */
+
     @GetMapping(Mappings.ADD_PRODUCT)
     //The model can supply attributes used for rendering views.
     public String addEditProduct(Model model){
@@ -86,6 +89,7 @@ public class ShoppingItemController {
      *
      * @return redirect page
      */
+
     @PostMapping(Mappings.ADD_PRODUCT)
     //ModelAttribute name must match in both the controller and in the form
     public String processProduct(@ModelAttribute(AttributeNames.SHOPPING_ITEM) ShoppingItem item){
@@ -96,6 +100,20 @@ public class ShoppingItemController {
                                               //also it's good to use redirect to an error page in
                                               // case if file upload wasn't successful.
 
+    }
+
+    /**
+     * Deletes a product from the list and redirect
+     * to the page with all products.
+     * @param id used to delete product with the specific id
+     * @return the page with the all products on it http://localhost:8080/shopping-list/items
+     */
+
+    @GetMapping(Mappings.DELETE_PRODUCT)
+    public String deleteProduct(@RequestParam int id){
+        log.info("Deleting product with id={}", id);
+        shoppingService.removeProduct(id);
+        return "redirect:/" + Mappings.ITEMS;
     }
 
 }
