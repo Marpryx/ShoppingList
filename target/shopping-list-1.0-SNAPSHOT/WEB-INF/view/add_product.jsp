@@ -1,6 +1,6 @@
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-    <%@ page import="prykhodko.learnSpring.util.AttributeNames" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="prykhodko.learnSpring.util.AttributeNames" %>
 
     <html>
     <head>
@@ -8,28 +8,31 @@
     </head>
 
     <body>
-            <div align="center">
-                <h1>Add New Product to the List</h2>
+        <div align="center">
+            <h1>Add New Product to the List</h2>
 
-                 <form:form method="POST" modelAttribute="${AttributeNames.SHOPPING_ITEM}">
-                                <table>
-                                    <tr>
-                                        <td><label>ID</label></td>
-                                        <td>
-                                            <form:input path="id" disabled="true" />
-                                        </td>
-                                    </tr>
-                                   <tr>
-                                                 <td><label>Item</label></td>
-                                                 <td><form:input path="item"/></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><label>Details</label></td>
-                                                 <td><form:textarea path="details"/></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><label>Amount</label></td>
-                                                 <td><form:input path="amount"/></td>
+                <form:form method="POST" modelAttribute="${AttributeNames.SHOPPING_ITEM}">
+                    <table>
+                        <tr>
+                            <td><label>ID</label></td>
+                            <td>
+                                <form:input path="id" disabled="true" />
+                            </td>
+                        </tr>
+
+                         <tr>
+                            <td><label>Item</label></td>
+                            <td><form:input path="item"/></td>
+                         </tr>
+
+                         <tr>
+                            <td><label>Details</label></td>
+                            <td><form:textarea path="details"/></td>
+                         </tr>
+
+                          <tr>
+                            <td><label>Amount</label></td>
+                            <td><form:input path="amount"/></td>
                                              </tr>
                                              <tr>
                                                  <td><label>Price</label></td>
