@@ -9,7 +9,6 @@
 
     <body>
         <div align="center">
-            <h1>Add New Product to the List</h2>
 
                 <form:form method="POST" modelAttribute="${AttributeNames.SHOPPING_ITEM}">
                     <table>
@@ -41,6 +40,7 @@
                                     <tr>
                                         <td><input type="submit" value="Submit"/></td>
                                     </tr>
+
                                 </table>
 
                         </form:form>

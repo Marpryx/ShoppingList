@@ -11,7 +11,7 @@
         <c:url var="addUrl" value="${Mappings.ADD_PRODUCT}" />
         <a href="${addUrl}">New Item</a>
 
-            <table border="1" cellpadding="5">
+            <table border="1" cellpadding="6">
 
                 <caption><h2>Shopping List</h2></caption>
 
@@ -20,10 +20,15 @@
                     <th>Details</th>
                     <th>Amount</th>
                     <th>Price</th>
-                    <th><Delete></th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
 
                 <c:forEach var="item" items="${shoppingData.items}">
+
+                    <c:url var="editUrl" value="${Mappings.ADD_PRODUCT}">
+                        <c:param name="id" value="${item.id}" />
+                    </c:url>
 
                     <c:url var="deleteUrl" value="${Mappings.DELETE_PRODUCT}">
                         <c:param name="id" value="${item.id}" />
@@ -34,7 +39,9 @@
                         <td><c:out value="${item.details}"/></td>
                         <td><c:out value="${item.amount}"/></td>
                         <td><c:out value="${item.price}"/></td>
+                        <td><a href="${editUrl}">Edit</a></td>
                         <td><a href="${deleteUrl}">Delete</a></td>
+
                     </tr>
 
                 </c:forEach>

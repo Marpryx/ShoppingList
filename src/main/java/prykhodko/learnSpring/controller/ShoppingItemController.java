@@ -74,8 +74,14 @@ public class ShoppingItemController {
 
     @GetMapping(Mappings.ADD_PRODUCT)
     //The model can supply attributes used for rendering views.
-    public String addEditProduct(Model model){
-        ShoppingItem item = new ShoppingItem("", "", 0, 0.00);
+    public String addEditProduct(@RequestParam(required=false, defaultValue = "-1") int id,
+                                    Model model){
+        log.info("Editing product id = {}", id );
+        ShoppingItem item = shoppingService.getProduct(id);
+        if(item == null){
+            item = new ShoppingItem("", "", 0, 0.00);
+        }
+
         model.addAttribute(AttributeNames.SHOPPING_ITEM, item);
         return ViewNames.ADD_PRODUCT_VIEW;
     }
@@ -95,11 +101,20 @@ public class ShoppingItemController {
     public String processProduct(@ModelAttribute(AttributeNames.SHOPPING_ITEM) ShoppingItem item){
 
       //  log.info("ShoppingItem from form = {}", item);
-        shoppingService.addProduct(item);
+
+        if(item.getId() == 0){
+            shoppingService.addProduct(item);
+        }else{
+            shoppingService.updateProduct(item);
+        }
+
+       // shoppingService.addProduct(item);
         return "redirect:/" + Mappings.ITEMS; //to redirect the view to another url (product table)
                                               //also it's good to use redirect to an error page in
                                               // case if file upload wasn't successful.
 
+        //Used in case of editing a product
+        //If id == 0, there is a new product, otherwise
     }
 
     /**
