@@ -11,7 +11,7 @@
         <div align="center">
 
                 <form:form method="POST" modelAttribute="${AttributeNames.SHOPPING_ITEM}">
-                    <table>
+                    <table border="1" cellpadding="2">
                         <tr>
                             <td><label>ID</label></td>
                             <td>
@@ -44,6 +44,7 @@
                                 </table>
 
                         </form:form>
+
 
             </div>
     </body>

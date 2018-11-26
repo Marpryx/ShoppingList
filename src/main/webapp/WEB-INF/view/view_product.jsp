@@ -8,8 +8,9 @@
 
 <body>
     <div align="center">
+    <h2>View Single Product</h2>
 
-        <table>
+        <table border="1" cellpadding="2">
             <tr>
                 <td><label>ID</label></td>
                 <td>
@@ -40,8 +41,9 @@
 
             </table>
 
+            <br/>
             <c:url var="tableUrl" value="${Mappings.ITEMS}" />
-            <a href="${tableUrl}"> Return to the List</a>
+            <a href="${tableUrl}"> Return to the List of Products</a>
 
 
         </div>

@@ -131,6 +131,12 @@ public class ShoppingItemController {
         return "redirect:/" + Mappings.ITEMS;
     }
 
+    /**
+     * Views choosen item from the list
+     * @param id used to view product with the specific id
+     * @param model
+     * @return the page with the single product on it http://localhost:8080/shopping-list/viewProduct?id=3
+     */
     @GetMapping(Mappings.VIEW_PRODUCT)
     public String viewItem(@RequestParam int id, Model model){
         ShoppingItem item = shoppingService.getProduct(id);

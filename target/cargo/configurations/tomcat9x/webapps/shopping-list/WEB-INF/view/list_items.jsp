@@ -9,7 +9,7 @@
 <body>
         <div align="center">
         <c:url var="addUrl" value="${Mappings.ADD_PRODUCT}" />
-        <a href="${addUrl}">New Item</a>
+        <a href="${addUrl}">Add New Item to the List</a>
 
             <table border="1" cellpadding="7">
 
