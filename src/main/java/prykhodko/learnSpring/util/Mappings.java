@@ -12,6 +12,7 @@ public final class Mappings {
     // == Constants ==
     public static final String ITEMS = "items";
     public static final String ADD_PRODUCT= "addProduct";
+    public static final String VIEW_PRODUCT = "viewProduct";
     public static final String DELETE_PRODUCT = "deleteProduct";
 
 

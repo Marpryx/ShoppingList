@@ -131,4 +131,12 @@ public class ShoppingItemController {
         return "redirect:/" + Mappings.ITEMS;
     }
 
+    @GetMapping(Mappings.VIEW_PRODUCT)
+    public String viewItem(@RequestParam int id, Model model){
+        ShoppingItem item = shoppingService.getProduct(id);
+        model.addAttribute(AttributeNames.SHOPPING_ITEM, item);
+        return ViewNames.VIEW_SINGLE_PRODUCT;
+
+    }
+
 }
